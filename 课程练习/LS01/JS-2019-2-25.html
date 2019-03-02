@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>课上1</title>
+</head>
+<body>
+	<div></div>
+</body>
+<script type="text/javascript">
+	var username = "zhangsan";
+	function setName() {
+		username = "lisi";
+	}
+
+	function setAge(){
+		age = 20;
+	}
+
+	function setInfor(){
+		setName();
+		setAge();
+	}
+
+	setInfor();
+	//条件控制语句
+	var tag = true;
+	if (tag) {
+		console.log('hello');
+	}
+	else{
+		console.log('world');
+	}
+
+	//switch case
+	//循环控制
+	// for (var i = 0; i < 5; i++) {
+	// 	console.log(i);
+	// }
+
+	// while(true){
+	// 	console.log('hello world');
+	// }
+	//string number boolean underfined null 五种变量类型
+	var num = 10;
+	var b1 = !!num;//转换为boolean类型
+
+	var str = '';//字符串自动转化为boolean 空为false
+	if (str) {
+		console.log('1');
+	}
+	else{
+		console.log('2');
+	}
+	var str1 = num + "2";
+	console.log(str1);
+	var str2 = "1022a";
+	var num2 = parseInt(str2);
+
+	var b2 = 10 && false;
+	console.log(b2);
+
+
+</script>
+</html>
