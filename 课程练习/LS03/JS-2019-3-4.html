@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //基本数据类型，在操作过程中会有自动装箱过程
+    //生成临时对象，临时对象在使用完成后会自动释放
+    var num = 10;
+    num.toString();//任何类型都有的方法
+
+    //实际的内部实现
+    var num = 10;
+    var numobject = new Number(num);
+    numobject.toString();
+
+    num.p = 10;
+    var t = num.p;
+    console.log(t);//underfined
+
+    var num1 = 11.26369;
+    var numobj2 = new Number(num1);
+    console.log(numobj2);
+
+    num1.toFixed(1);//保留一位小数 11.3  proto原型链上的方法
+    num1.toFixed(4);//保留四位小数 11.2637
+
+    var n1 = 12345.6789;
+    console.log(n1.toFixed(2));
+    console.log(n1.toPrecision(4));//指数前面保留位数为4位 1.235e+4
+    console.log(n1.toPrecision(5));//指数前面保留位数为5位 1.2346
+    console.log(n1.toString());
+    console.log(n1.toExponential(2));
+
+    //Number构造器属性（静态属性）
+    Number.MAX_VALUE
+    Number.MIN_VALUE
+    Number.NaN
+    Number.NEGATIVE_INFINITY
+    Number.POSITIVE_INFINITY
+
+    var str1 = "abcdef";
+    console.log(str1.charAt(3));
+
+    //实际运行
+    var str = "abcde";
+    var strobject = new String(str);
+    //charAt(index)返回特定索引位置的字符
+    var a = strobject.charAt(2);
+    console.log(a);
+
+    "B".localeCompare("A"); //考虑本地化的字符排序，返回0或非0   1 "B">"A"  
+    //基本数据类型，变量的__proto__属性 == 变量的构造函数的prototype属性
+    //num.__proto__ == Number.prototype
+    var num2 = 20;
+    console.log(num2.__proto__);
+
+    console.log(Number.prototype);
+
+    //
+    var str = "abcdefgh";
+    str.charAt(5);//返回特定索引位置的字符 f
+    str.charCodeAt(0);//返回特定索引位置的字符的unicode码 97
+    str.slice(1,6);//slice(截取起始位置，截取的结束位置)不包含最后一个 "bcdef"
+    str.slice(0,-2);//slice(截取起始位置，截取的结束位置)不包含最后一个 "abcdef"
+    str.substr(0,3);//substr(截取字符串起始位置，截取字符串的长度) ""
+    str.substring(3,0);//substring(截取字符串起始位置，截取字符串的结束位置) 
+        //起始>结束,则互换位置，若超出索引位置（0~str.length-1）,会进行自动截断
+    str.split("d",1);//split("特定的字符"，限定数组的元素个数)将字符串以特定的字符进行分隔,将字符串作为数组生成数组
+
+    var str3 = " abc      d ";
+    str3.trim();//trim()去除字符串两边的空白字符，字符串内部的不去除
+    str3.concat("李佳猪","哈哈哈哈哈或");
+    
+</script>
+</html>
