@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 'use strict'//使用严格模式 对当前页面的所有JAvaScript都使用严格模式
+    // function fn1(){//对函数内部代码的JAvaScript代码都使用严格模式
+    //     'use strict'
+    // }
+    // //如果变量不使用var声明，会自动提升为全局变量,是JS很大的一个问题
+    // function fn1() {//严格模式下变量必须进行显示的声明
+    //     'use strict'
+    //     var username = "zhangsan";
+    // }
+    // fn1();
+    // console.log(username);
+    var a = 1;
+    console.log(window);
+    function fn2() {
+        //非严格模式下普通函数的内部this指向window对象
+        //严格模式下this指向underfined
+        'use strict'
+        console.log(this);
+    }
+</script>
+</html>

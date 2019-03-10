@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //'use strict'
+    var str = "abcdef";
+    //字符串的length属性是只读属性，严格模式下操作会报错
+    str.length = 1;
+    //解释
+    var strObject = new String(str);
+    strObject.length = 1;
+
+    console.log(str.length);
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //switch case是进行的值和类型的判断，不会发生隐式类型转换
+    //if else 条件少的时候
+    var index = 1;
+    switch(index){
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        console.log("工作日");
+        break;
+        case 6:
+        case 7:
+        console.log("休息日");        
+        default:
+        console.log("均不符合");
+    }
+    var obj1 = {"username":"zhangsan","age":20};
+    obj1.__proto__.sex = "male";
+    for (var i in obj1) {
+        console.log(i,obj1[i]);
+    }
+    //for in 遍历数组不推荐
+    var arr1 = [1, ,3];
+    for(var j in arr1){
+        console.log(j,arr1[j]);
+    }
+</script>
+</html>
