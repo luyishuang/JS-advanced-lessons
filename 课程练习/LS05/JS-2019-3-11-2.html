@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //定义函数的形参和调用函数的实参个数可以不一致
+    //ES5中实现默认值的过程
+    function sum(x,y,z) {
+        console.log(x,y,z);
+        x = x || 1;
+        y = y || 2;
+        z = z || 3;
+        return x + y + z;
+    }
+    console.log(sum(4,5,6));
+    //ES6中设置函数默认值
+    function sum1(x , y = 2 ,z = 3) {
+        return x + y + z;        
+    }
+    console.log(sum1(1));
+</script>
+</html>

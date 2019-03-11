@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log(sum(1,2));//变量的定义会被解释器进行提升
+    function sum(x , y) {
+        return x + y;
+    }
+    sum(1,2);
+    window.onload = function(){
+        alert("页面加载完成");
+    }
+    var sum1 = function (x , y) {
+        return x + y;
+    }
+    sum1(1,2);//不能写到前面
+    //使用Function构造函数来实例化得到一个function
+    //Function构造函数实例化的函数，执行效率相对较低，但是更加灵活
+    var fn1 = new Function('x','y','return x + y');
+    fn1(1,2);
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // = 赋值
+    // == 判断值是否相等
+    // === 判断类型和值是否相等，先判断类型
+
+    // 表达式要发反写,等号写错就会报错
+    var a = 45;
+    if(54 == a){//这个是对的情况
+        console.log("判等");
+    }
+    // == === 
+    var a1 = 20;
+    var a2 = "20";
+    if(a1 == a2){//会进行隐式类型转换
+
+    }
+
+    //===先判断类型，然后再判断值，如果类型不同就不再进行值的判断了
+    if(a1 === a2){
+
+    }
+
+    var x = "1";
+    console.log(++x); //2 先加一后输出
+    var x = "1";
+    console.log(x += 1); //11 字符串的拼接
+    var x = "1";
+    console.log(x++); //1 先输出后加一
+    //左真右 左假左
+    20 && 0 ;//0
+    0 && 20; //0
+    null &&10 ; //null
+    //对象转布尔类型都为真
+    var score = 76;
+    console.log((score > 90 && "优") || (score > 75 && "良") || (score > 60 && "及格") || "不及格");
+    //switch和case做的是全等的判断，值和类型必须相等
+    switch (true) {
+        case score > 90:
+            console.log("优");
+            break;
+        case score > 75:
+            console.log("良");
+            break;
+        case score > 60:
+            console.log("及格");
+            break;        
+        default:
+        console.log("不及格");
+            break;
+    }
+</script>
+</html>
