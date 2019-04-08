@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var obj  = {"username":"zhangsan","age":20};
+    //定义一个函数完成对变量的复制过程，生成新的变量，并返回。引用数据类型时，数组、对象
+    function copyArg(arg1){
+        var copy;
+        switch(true){
+            case (arg1 instanceof String):
+                copy = arg1;
+                break;
+            case (arg1 instanceof Number):
+                copy = arg1;
+                break;
+            case (arg1 instanceof Boolean):
+                copy = arg1;
+                break;
+            case (arg1 instanceof Array):
+                copy = [];
+                for(var i = 0; i < arg1.length;i ++){
+                    copy[i] = arg1[i];
+                } 
+                break;  
+        }
+    }
+
+    var str = "abc";
+    var strObject = new Object();
+    console.log(strObject instanceof Object);
+
+    
+</script>
+</html>
