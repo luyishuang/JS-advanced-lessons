@@ -1,9 +1,6 @@
-/**
- * Created by qile on 2017/8/14.
- */
 // 高阶函数
 
-// Part 11111111111111 函数作为参数被传递（最常见的形式，回调函数）
+// 函数作为参数被传递（最常见的形式，回调函数）
 // 实例一 高阶函数一般应用 01
 function add(x, y, f) {
     return f(x) + f(y);
@@ -107,11 +104,8 @@ document.addEventListener("click", function(){
     console.log("click callback");
 });
 
-//异步请求回调实例，详情参见Ajax章节
-//http://www.runoob.com/try/try.php?filename=tryajax_xml
 
-
-// Part 22222222222222222 函数作为返回值输出
+// 函数作为返回值输出
 var x=12;
 var obj = {
     x:34,
@@ -121,11 +115,11 @@ var obj = {
 };
 var fun1 = function () {
     return function fun2() {
-        return this.x;//若改为 return this;
+        return this.x;
     }
 };
 obj.fun3 = fun1;
 obj.fun4 = fun1();
-console.log("输出：",obj.fun3());//输出什么
-console.log("输出：",obj.fun3()());//输出什么
-console.log("输出：",obj.fun4());//输出什么
+console.log("输出：",obj.fun3());
+console.log("输出：",obj.fun3()());
+console.log("输出：",obj.fun4());

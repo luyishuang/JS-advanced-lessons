@@ -1,7 +1,3 @@
-/**
- * Created by qile on 2017/8/14.
- */
-
 function foo(){}
 console.log(foo); //
 console.log(typeof foo); //
@@ -18,7 +14,6 @@ console.log(typeof Math);	 //
 console.log(typeof JSON);	 //
 
 
-//思考：
 console.log(typeof new Function());// function or object
 console.log(typeof new Array());	 // function or object
 console.log(typeof new Date());	 // function or object
